@@ -14,6 +14,8 @@ export interface ProductsState {
     selectedCategory: string;
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
+    currentPage: number,
+    itemsPerPage: number
 }
 
 export interface ProductCardProps {
