@@ -12,6 +12,7 @@ export interface ProductsState {
     categories: string[];
     filteredProducts: Product[];
     selectedCategory: string;
+    selectedProduct: Product | null;
     status: 'idle' | 'loading' | 'succeeded' | 'failed';
     error: string | null;
     currentPage: number,

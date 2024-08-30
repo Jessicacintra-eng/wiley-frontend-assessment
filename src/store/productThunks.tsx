@@ -11,3 +11,7 @@ export const fetchCategories = createAsyncThunk('products/fetchCategories', asyn
     return ['all', ...response.data];
 });
 
+export const deleteProduct = createAsyncThunk('products/deleteProduct', async (productID: number) => {
+    await axios.delete(`https://fakestoreapi.com/products/${productID}`);
+    return productID;
+});

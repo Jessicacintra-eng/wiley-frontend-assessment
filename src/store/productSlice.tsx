@@ -1,12 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ProductsState } from '../interfaces/interfaces'
-import { fetchCategories, fetchProducts } from './productThunks'
+import { deleteProduct, fetchCategories, fetchProducts } from './productThunks'
 
 const initialState: ProductsState = {
   products: [],
   categories: [],
   filteredProducts: [],
   selectedCategory: 'all',
+  selectedProduct: null,
   status: 'idle',
   error: null,
   currentPage: 1,
@@ -30,6 +31,9 @@ const productsSlice = createSlice({
     setPage: (state, action) => {
       state.currentPage = action.payload
     },
+    setSelectedProduct(state, action) {
+      state.selectedProduct = state.products.find(product => product.id === action.payload) || null;
+  },
   },
   extraReducers: (builder) => {
     builder
@@ -48,9 +52,15 @@ const productsSlice = createSlice({
       .addCase(fetchCategories.fulfilled, (state, action) => {
         state.categories = action.payload
       })
+      .addCase(deleteProduct.fulfilled, (state, action) => {
+        state.products = state.products.filter(product => product.id !== action.payload);
+        if (state.selectedProduct && state.selectedProduct.id === action.payload) {
+            state.selectedProduct = null;
+        }
+    })
   },
 })
 
-export const { filterByCategory, setPage  } = productsSlice.actions
+export const { filterByCategory, setPage, setSelectedProduct } = productsSlice.actions
 
 export default productsSlice.reducer
