@@ -10,6 +10,7 @@ import ProductCard from '../components/productCard/ProductCard';
 import { filterByCategory, setPage, setSnackbarState } from '../store/productSlice';
 import { fetchCategories, fetchProducts } from '../store/productThunks';
 import { AppDispatch, RootState } from '../store/store';
+import SkeletonPage from './SkeletonPage';
 
 export const ProductListPage = () => {
   const navigate = useNavigate()
@@ -54,7 +55,7 @@ export const ProductListPage = () => {
   }
 
   if (status === 'loading') {
-    return <div>Loading...</div>
+    return <SkeletonPage/>
   }
   const startIndex = (currentPage - 1) * itemsPerPage
   const endIndex = startIndex + itemsPerPage
