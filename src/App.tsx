@@ -14,7 +14,7 @@ function App() {
         <div>
           <Header />
         </div>
-        <div style={{ marginTop: '60px' }}>
+        <div style={{ marginTop: '4.17vw' }}>
           <Routes>
             <Route path="/" element={<ProductListPage />} />
             <Route path="/homeProdutos" element={<ProductListPage />} />

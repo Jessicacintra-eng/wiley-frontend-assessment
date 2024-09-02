@@ -42,7 +42,7 @@ function ProductCard({
         ratio="1/1"
         sx={{
           width: {
-            xs: '72px',
+            xs: '5.00vw',
             sm: '7.22vw',
           },
           borderRadius: 'md',

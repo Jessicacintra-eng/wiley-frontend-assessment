@@ -68,8 +68,8 @@ export const ProductListPage = () => {
       <Box
         sx={{
           margin: {
-            xs: '32px 0',
-            sm: '24px 0',
+            xs: '2.22vw 0',
+            sm: '1.67vw 0',
           },
           display: 'flex',
           justifyContent: 'space-between',
@@ -82,8 +82,8 @@ export const ProductListPage = () => {
           sx={{
             borderRadius: 0,
             height: {
-              xs: '40px',
-              sm: '56px',
+              xs: '2.78vw',
+              sm: '3.89vw',
             },
             backgroundColor: '#115C36',
             '&:hover': {

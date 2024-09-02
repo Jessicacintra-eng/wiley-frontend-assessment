@@ -88,8 +88,8 @@ export const ProductDetailPage = () => {
           <Divider
             sx={{
               margin: {
-                xs: '24px 0',
-                sm: '32px 0',
+                xs: '1.67vw 0',
+                sm: '2.22vw 0',
               },
             }}
           />
@@ -100,12 +100,12 @@ export const ProductDetailPage = () => {
             ratio="1/1"
             sx={{
               width: {
-                xs: '240px',
-                sm: '240px',
+                xs: '86.67vw',
+                sm: '16.67vw',
               },
               height: {
-                xs: '240px',
-                sm: '240px',
+                xs: '86.67vw',
+                sm: '16.67vw',
               },
               borderRadius: 'md',
               overflow: 'hidden',

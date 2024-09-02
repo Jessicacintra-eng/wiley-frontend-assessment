@@ -176,8 +176,8 @@ function ProductForm() {
             display: 'flex',
             justifyContent: 'space-between',
             margin: {
-              sm: '32px 0',
-              xs: '24px 0',
+              sm: '2.22vw 0',
+              xs: '1.67vw 0',
             },
           }}
         >
@@ -202,8 +202,8 @@ function ProductForm() {
             display: 'flex',
             justifyContent: 'space-between',
             margin: {
-              sm: '32px 0',
-              xs: '24px 0',
+              sm: '2.22vw 0',
+              xs: '1.67vw 0',
             },
           }}
         >
@@ -240,11 +240,11 @@ function ProductForm() {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              border: '2px dashed #ccc',
+              border: '0.14vw dashed #ccc',
               textAlign: 'center',
               color: '#666',
               '&:hover': {
-                border: '2px dashed #888',
+                border: '0.14vw dashed #888',
                 backgroundColor: '#f9f9f9',
               },
             }}

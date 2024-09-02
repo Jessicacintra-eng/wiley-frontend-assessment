@@ -67,8 +67,8 @@ const CategoryFilter = () => {
         sx={{
           color: 'black',
           backgroundColor: 'white',
-          boxShadow: '2px solid grey',
-          minHeight: '56px',
+          boxShadow: '0.14vw solid grey',
+          minHeight: '3.89vw',
           borderRadius: 0,
           display: { xs: 'none', sm: 'flex' },
         }}
@@ -82,9 +82,9 @@ const CategoryFilter = () => {
           borderRadius: 0,
           color: 'black',
           backgroundColor: 'white',
-          boxShadow: '2px solid grey',
-          height: '40px',
-          minWidth: '46px',
+          boxShadow: '0.14vw solid grey',
+          height: '2.78vw',
+          minWidth: '3.19vw',
           display: { xs: 'flex', sm: 'none' },
         }}
         onClick={toggleFilter}
@@ -99,8 +99,8 @@ const CategoryFilter = () => {
             top: '100%',
             left: 0,
             backgroundColor: 'white',
-            boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
-            borderRadius: '4px',
+            boxShadow: '0px 0.28vw 0.42vw rgba(0, 0, 0, 0.1)',
+            borderRadius: '0.28vw',
             padding: 2,
             zIndex: 10,
             width: '200px',
