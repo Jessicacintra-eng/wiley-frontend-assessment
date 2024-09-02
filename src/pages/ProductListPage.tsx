@@ -4,7 +4,7 @@ import Snackbar, { SnackbarProps } from '@mui/joy/Snackbar';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import CategoryFilter from '../components/categoryFilter/CategoryFIlter';
+import CategoryFilter from '../components/categoryFilter/CategoryFilter';
 import ListTitle from '../components/listTitle/ListTitle';
 import ProductCard from '../components/productCard/ProductCard';
 import { filterByCategory, setPage, setSnackbarState } from '../store/productSlice';
