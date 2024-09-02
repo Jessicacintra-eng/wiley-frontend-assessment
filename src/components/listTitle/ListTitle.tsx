@@ -17,7 +17,6 @@ function ListTitle() {
         PRICE
       </Typography>
 
-      {/* for mobile */}
       <Typography className="list-title-mobile">
       IMAGE/TITLE / CATEGORY / PRICE
       </Typography>

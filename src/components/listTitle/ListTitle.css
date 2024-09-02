@@ -4,7 +4,8 @@
   text-align: center;
   gap: 0;
   border-bottom: 1px solid #cdcdcd;
-  margin-bottom: 1vw; 
+  margin-bottom: 8px; 
+  margin-top: 24px;
   padding: 1.67vw 0; 
 }
 
@@ -22,6 +23,7 @@
 .list-title-price,
 .list-title-image {
   display: block!important;
+  font-size: 14px !important;
 }
 
 .list-title-mobile {
@@ -45,5 +47,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-size: 12px !important;
   }
 }

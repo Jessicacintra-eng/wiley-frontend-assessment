@@ -23,6 +23,7 @@ const theme = extendTheme({
       styleOverrides: {
         root: {
           color: '#313131',
+          fontFamily: '"Open Sans", sans-serif',
         },
       
   }
