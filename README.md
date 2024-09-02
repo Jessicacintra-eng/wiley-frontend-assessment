@@ -11,6 +11,7 @@ This project is a React application built as part of a technical assessment for 
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Future Implementations](#futureImplementations)
+- [Design](#design)
 
 ## Features
 
@@ -138,3 +139,10 @@ Here's an overview of the project's structure:
 - **Automated Testing**: Set up automated tests to run on each commit and pull request.
 - **CI/CD Integration**: Integrate unit tests with CI/CD pipelines for continuous validation.
 
+## Design
+
+The design for this project can be viewed [here](https://www.figma.com/design/W50EKR5oJhSqxSDD2mBmDx/Wiley?node-id=0-1&t=V06eh9kOz4PFSle4-1).
+
+![Figma Design](![alt text](./src/assets/image.png)) 
+
+This design provides a comprehensive layout and visual guide for the application, detailing the user interface components and overall style.
