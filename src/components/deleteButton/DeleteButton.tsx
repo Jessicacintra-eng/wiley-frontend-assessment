@@ -5,14 +5,17 @@ import {
   DialogContent,
   DialogTitle,
   Divider,
-  ModalDialog
+  ModalDialog,
+  Snackbar,
+  SnackbarProps
 } from '@mui/joy'
 import Modal from '@mui/joy/Modal'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
+import { setSnackbarState } from '../../store/productSlice'
 import { deleteProduct } from '../../store/productThunks'
-import { AppDispatch } from '../../store/store'
+import { AppDispatch, RootState } from '../../store/store'
 
 function DeleteButton() {
   const { id } = useParams<{ id: string }>()
@@ -20,8 +23,18 @@ function DeleteButton() {
   const navigate = useNavigate()
 
   const [openDialog, setOpenDialog] = useState(false)
-  const [dialogMessage, setDialogMessage] = useState('')
-  const [dialogColor, setDialogColor] = useState<'success' | 'danger'>('success')
+  const openSnackbar = useSelector(
+    (state: RootState) => state.products.snackbar,
+  )
+  const handleCloseSnackbar = () => {
+    dispatch(
+      setSnackbarState({
+        open: false,
+        message: '',
+        severity: 'success' as SnackbarProps['color'],
+      }),
+    )
+  }
 
   const handleOpenDialog = () => setOpenDialog(true)
   const handleCloseDialog = () => setOpenDialog(false)
@@ -30,13 +43,7 @@ function DeleteButton() {
     if (id) {
       try {
         await dispatch(deleteProduct(Number(id))).unwrap()
-        setDialogMessage('Success, product deleted')
-        setDialogColor('success')
-        setOpenDialog(true)
         navigate('/')
-      } catch (error) {
-        setDialogMessage("We couldn't delete this product right now, try again later")
-        setDialogColor('danger')
       } finally {
         handleCloseDialog()
       }
@@ -63,11 +70,6 @@ function DeleteButton() {
           </DialogTitle>
           <Divider />
           <DialogContent>
-            {dialogMessage && (
-              <div style={{ color: dialogColor === 'success' ? 'green' : 'red', marginBottom: '16px' }}>
-                {dialogMessage}
-              </div>
-            )}
             Are you sure you want to delete this product?
           </DialogContent>
           <DialogActions>
@@ -84,6 +86,16 @@ function DeleteButton() {
           </DialogActions>
         </ModalDialog>
       </Modal>
+        <Snackbar
+        open={openSnackbar.open}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
+        color={openSnackbar.severity}
+        variant="solid"
+        autoHideDuration={4000}
+      >
+        {openSnackbar.message}
+      </Snackbar>
     </>
   )
 }
