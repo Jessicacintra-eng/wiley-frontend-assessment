@@ -1,0 +1,15 @@
+.header {
+  background-color: #115C36;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  min-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo{
+    width: 114px;
+    height:  114px;
+}

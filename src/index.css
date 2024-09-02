@@ -1,0 +1,22 @@
+:root {
+  font-family: inherit;
+  line-height: normal;
+  font-weight: normal;
+
+  color-scheme: initial;
+  color: initial;
+  background-color: #F7F7F7;
+
+  font-synthesis: initial;
+  text-rendering: auto;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+body {
+  margin: 0;
+  display: block;
+  place-items: unset;
+  min-width: initial;
+  min-height: initial;
+}

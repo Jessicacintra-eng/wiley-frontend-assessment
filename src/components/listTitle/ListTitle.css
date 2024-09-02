@@ -1,0 +1,52 @@
+.list-title-container {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  gap: 0;
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 8px; 
+  margin-top: 1.67vw;
+  padding: 1.67vw 0; 
+}
+
+.list-title-container {
+  grid-template-columns: 13% 55% 22% 10%;
+  text-align: left;
+}
+
+.list-title-image{
+  padding-left: 1.67vw;
+}
+
+.list-title-title,
+.list-title-category,
+.list-title-price,
+.list-title-image {
+  display: block!important;
+  font-size: 14px !important;
+}
+
+.list-title-mobile {
+  display: none!important;
+}
+
+@media (max-width: 600px) {
+  .list-title-title,
+  .list-title-category,
+  .list-title-price,
+  .list-title-image {
+    display: none !important;
+  }
+  
+  .list-title-container {
+    grid-template-columns: 1fr;
+  }
+
+  .list-title-mobile {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 12px !important;
+  }
+}
