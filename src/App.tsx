@@ -1,7 +1,7 @@
 import { Provider } from 'react-redux'
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Header } from './components/header/Header'
-import { ErrorPage } from './pages/ErrorPage'
+import ErrorPage from './pages/ErrorPage'
 import { ProductDetailPage } from './pages/ProductDetailPage'
 import { ProductInsertionPage } from './pages/ProductInsertionPage'
 import { ProductListPage } from './pages/ProductListPage'
